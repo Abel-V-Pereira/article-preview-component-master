@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 0.813rem;
+    font-weight: 500;
+    background-color: var(--lightGrayishBlue);
+    color: var(--desaturatedDarkBlue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content {
+    width: 20.5rem;
+    background-color: var(--white);
+    border-radius: .6rem;
+    margin-block-start: -1.8rem;
+    box-shadow: rgba(87, 111, 138, 0.178) 0rem 3.125rem 3.438rem -0.313rem, rgba(0, 162, 255, 0.04) 0rem 0.625rem 0.625rem -0.313rem;
+}
+
+.content>img {
+    width: 20.5rem;
+    height: 12.6rem;
+    object-fit: cover;
+    object-position: 100% 27%;
+    border-radius: .6rem .6rem 0 0;
+}
+
+.info {
+    margin-inline: 2.2rem;
+    margin-block: 1.4rem;
+}
+
+.description {
+    text-align: left;
+    margin-block: 2rem;
+}
+
+.description h1 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-block-end: 1rem;
+}
+
+.description p {
+    line-height: 1.3rem;
+}
+
+.description h1,
+.profile-info span {
+    color: var(--veryDarkGrayishBlue);
+    font-weight: 700;
+}
+
+.profile-and-share {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile>img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.share button {
+    padding: .5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.inactive {
+    background-color: var(--lightGrayishBlue);
+    transition: 0.3s ease-in-out;
+}
+
+.active {
+    background-color: var(--veryDarkGrayishBlue);
+    transition: 0.3s ease-in-out;
+}
+
+.active path {
+    fill: var(--white);
+    transition: 0.3s ease-in-out;
+}
+
+.share-options {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    position: absolute;
+    bottom: 31%;
+    left: 41.7%;
+    background-color: var(--veryDarkGrayishBlue);
+    padding-block: 1.1rem;
+    padding-inline: 1.1rem;
+    border-radius: .6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.display {
+    opacity: 1;
+    visibility: visible;
+}
+
+.share-options::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    transform: translateX(-50%);
+    border-width: 12px;
+    border-style: solid;
+    border-color: var(--veryDarkGrayishBlue) transparent transparent transparent;
+}
+
+.share-options>span {
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+footer a {
+    color: var(--grayishBlue);
+}
