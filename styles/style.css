@@ -6,6 +6,8 @@
     --grayishBlue: hsl(212, 23%, 69%);
     --lightGrayishBlue: hsl(210, 46%, 95%);
     --white: hsl(0, 0%, 100%);
+    --shadowColor1: hsla(212, 23%, 44%, 0.178);
+    --shadowColor2: hsla(202, 100%, 50%, 0.04)
 }
 
 body {
@@ -27,7 +29,7 @@ body {
     background-color: var(--white);
     border-radius: .6rem;
     margin-block-start: -1.8rem;
-    box-shadow: rgba(87, 111, 138, 0.178) 0rem 3.125rem 3.438rem -0.313rem, rgba(0, 162, 255, 0.04) 0rem 0.625rem 0.625rem -0.313rem;
+    box-shadow: var(--shadowColor1) 0rem 3.125rem 3.438rem -0.313rem, var(--shadowColor2) 0rem 0.625rem 0.625rem -0.313rem;
 }
 
 .content>img {
@@ -145,4 +147,18 @@ footer {
 
 footer a {
     color: var(--grayishBlue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .inactive {
+        transition: none;
+    }
+
+    .active {
+        transition: none;
+    }
+
+    .active path {
+        transition: none;
+    }
 }

@@ -1,5 +1,5 @@
-let shareButton = document.getElementById("share-button")
-let shareOptions = document.getElementById("share-options")
+const shareButton = document.getElementById("share-button")
+const shareOptions = document.getElementById("share-options")
 
 shareButton.addEventListener('click', () => {
     shareOptions.classList.toggle("display")
